@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script>
+    window.onload = function () {
+      generateReportsList()
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saved Reports</title>
+  
+</head>
+
+<body>
+  <div id="nav">
+    <a href="homepage.html">Home</a>
+    <a href="compare_players.html">Compare Players</a>
+    <a href="compare_teams.html">Compare Teams</a>
+    <a href="create_report.html">Create a New Report</a>
+    <a href="saved_reports.html">View Saved Reports</a>
+  </div>
+
+  <div id="header">
+    <h1>Fantasy Football Report Generator</h1>
+  </div>
+
+  <h2>Saved Reports</h2>
+
+  <ul id="reports-list"></ul>
+  <div id="report-content"></div>
+  <div id="report_table" class="result_table"> </div>
+  <script src="../static/config.js"></script>
+  <script src="../static/generate_options.js"></script>
+  <script src="../static/saved_reports.js"></script>
+</body>
+
+</html>

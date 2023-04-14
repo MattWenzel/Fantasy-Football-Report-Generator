@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/styles.css">
+  <title>Compare Players</title>
+  <script>
+    window.onload = function () {
+      generateOptions(2002, 2022, "yearSelect");
+      generateOptions(2002, 2022, "yearSelect2");
+    }
+  </script>
+</head>
+
+<body>
+  <div id="nav">
+    <a href="homepage.html">Home</a>
+    <a href="compare_players.html">Compare Players</a>
+    <a href="compare_teams.html">Compare Teams</a>
+    <a href="create_report.html">Create a New Report</a>
+    <a href="saved_reports.html">View Saved Reports</a>
+  </div>
+  <div id="header">
+    <h1>Fantasy Football Report Generator</h1>
+  </div>
+
+
+  <h2>Player Comparison Tool</h2>
+
+  <div class="forms-wrapper">
+    <form id="form1" class="compare_panel">
+
+      <h3> Select Player 1 </h3><br>
+
+      <div id="scoring">
+        <input type="radio" id="STD" name="scoringType" value="std" checked="checked">
+        <label for="STD">STD</label>
+        <input type="radio" id="PPR" name="scoringType" value="ppr">
+        <label for="PPR">PPR</label>
+        <input type="radio" id="Half-PPR" name="scoringType" value="half-ppr">
+        <label for="Half-PPR">Half-PPR</label>
+      </div><br>
+
+      <div id="yearContainer">
+        <label for="yearSelect">Year:</label>
+        <select id="yearSelect" name="year">
+          <option value="">Select a year</option>
+        </select>
+      </div><br>
+
+      <div id="playerContainer">
+        <label for="playerSelect">Player:</label>
+        <select id="playerSelect" name="player">
+          <option value="">Select a player</option>
+        </select>
+      </div><br>
+
+    </form>
+
+    <form id="form2" class="compare_panel">
+
+      <h3> Select Player 2 </h3><br>
+
+      <div id="scoring2">
+        <input type="radio" id="STD2" name="scoringType" value="std" checked="checked">
+        <label for="STD2">STD</label>
+        <input type="radio" id="PPR2" name="scoringType" value="ppr">
+        <label for="PPR2">PPR</label>
+        <input type="radio" id="Half-PPR2" name="scoringType" value="half-ppr">
+        <label for="Half-PPR2">Half-PPR</label>
+      </div><br>
+
+      <div id="yearContainer2">
+        <label for="yearSelect2">Year:</label>
+        <select id="yearSelect2" name="year2">
+          <option value="">Select a year</option>
+        </select>
+      </div><br>
+
+      <div id="playerContainer2">
+        <label for="playerSelect2">Player:</label>
+        <select id="playerSelect2" name="player2">
+          <option value="">Select a player</option>
+        </select>
+      </div><br>
+
+    </form>
+  </div>
+
+  <div class="button_container">
+    <input type="submit" value="Submit" , id="submit">
+    <button type="button" id="clearForm">Clear Form</button>
+  </div>
+
+  <div id="player_table" class="result_table">
+    <table>
+    </table>
+  </div>
+  <script src="../static/config.js"></script>
+  <script src="../static/generate_options.js"></script>
+  <script src="../static/compare_players.js"></script>
+</body>
+
+</html>

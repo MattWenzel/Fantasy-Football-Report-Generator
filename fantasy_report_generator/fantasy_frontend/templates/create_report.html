@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a New Report</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/styles.css">
+
+  <script>
+    window.onload = function () {
+      loadOptions();
+    }
+  </script>
+</head>
+
+<body>
+  <div id="nav">
+    <a href="homepage.html">Home</a>
+    <a href="compare_players.html">Compare Players</a>
+    <a href="compare_teams.html">Compare Teams</a>
+    <a href="create_report.html">Create a New Report</a>
+    <a href="saved_reports.html">View Saved Reports</a>
+  </div>
+  <div id="header">
+    <h1>Fantasy Football Report Generator</h1>
+  </div>
+
+  <h2>Create a New Report</h2>
+
+  <form id="form", class="form_panel">
+
+    <div id="scoring">
+      <p class="radio-label">Scoring Type:</p>
+      <input type="radio" id="STD" name="scoringType" value="" checked="checked" class="position-checkbox">
+      <label for="STD" class="position-label">STD </label>
+      <input type="radio" id="PPR" name="scoringType" value="ppr" class="position-checkbox">
+      <label for="PPR" class="position-label">PPR</label>
+      <input type="radio" id="Half-PPR" name="scoringType" value="half-ppr" class="position-checkbox">
+      <label for="Half-PPR" class="position-label">Half-PPR</label>
+    </div><br>
+
+  
+    <div class="year_container">
+      <div id="startYr">
+        <label for="startYear">Start Year:</label><br>
+        <select id="startYear" name="startYear">
+          <option value="">Select a year</option>
+        </select>
+      </div>
+      <div id="endYr">
+        <label for="endYear">End Year:</label><br>
+        <select id="endYear" name="endYear">
+          <option value="">Select a year</option>
+        </select>
+      </div>
+    </div><br>
+
+    <div class="week_container">
+      <div id="startWk">
+        <label for="startWeek">Start Week:</label><br>
+        <select id="startWeek" name="startWeek">
+          <option value="">Select a week</option>
+        </select>
+      </div>
+      <div id="endWk">
+        <label for="endWeek">End Week:</label><br>
+        <select id="endWeek" name="endWeek">
+          <option value="">Select a week</option>
+        </select>
+      </div>
+    </div><br>
+
+    <div id="position_list">
+      <p> Player Positions:</p>
+      <input type="checkbox" id="QB" name="position" value="QB" class="position-checkbox">
+      <label for="QB" class="position-label">QB</label>
+      <input type="checkbox" id="RB" name="position" value="RB" class="position-checkbox">
+      <label for="RB" class="position-label">RB</label>
+      <input type="checkbox" id="WR" name="position" value="WR" class="position-checkbox">
+      <label for="WR" class="position-label">WR</label>
+      <input type="checkbox" id="TE" name="position" value="TE" class="position-checkbox">
+      <label for="TE" class="position-label">TE</label>
+      <input type="checkbox" id="DST" name="position" value="DST" class="position-checkbox">
+      <label for="DST" class="position-label">DST</label>
+      <input type="checkbox" id="K" name="position" value="K" class="position-checkbox">
+      <label for="K" class="position-label">K</label>
+    </div><br>
+
+    <div id="minGames">
+      <label for="minGamesPlayed">Minimum Games Played:</label>
+      <select id="minGamesPlayed"></select>
+    </div><br>
+
+    <div id="numPlayers">
+      <label for="maxPlayers">Maximum Players to Display:</label>
+      <select id="maxPlayers"></select>
+    </div><br>
+
+    <div id="teams">
+      <label for="team">Select Team:</label>
+      <select id="team"></select>
+    </div><br>
+
+    <div class="button_container">
+      <input type="submit" value="Submit">
+      <button type="button" id="clearForm">Clear Form</button>
+      <button type="button" id="saveReport">Save Report</button>
+    </div>
+
+  </form>
+
+  <div id="report_table" class="result_table">
+    <table>
+    </table>
+  </div>
+  <script src="../static/config.js"></script>
+  <script src="../static/generate_options.js"></script>
+  <script src="../static/create_report.js"></script>
+</body>
+
+</html>
